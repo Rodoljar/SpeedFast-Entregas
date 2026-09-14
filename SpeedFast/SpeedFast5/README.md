@@ -1,5 +1,4 @@
-# SpeedFast - Módulo Semana 5: Concurrencia y Sincronización
-
+# SpeedFast - Módulo Semana 5:Sincronizando procesos en sistemas concurrentes
 Este módulo implementa el sistema de control de concurrencia y gestión de despacho para **SpeedFast**, asegurando la sincronización de hilos al procesar pedidos en zonas de carga compartidas.
 
 ##  Características Principales
