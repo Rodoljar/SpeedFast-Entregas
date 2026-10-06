@@ -1,0 +1,48 @@
+package com.speedfast.modelo;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+
+public class Entrega {
+    private int id;
+    private Pedido pedido;
+    private Repartidor repartidor;
+    private LocalDate fecha;
+    private LocalTime hora;
+
+
+    public Entrega(Pedido pedido, Repartidor repartidor, LocalDate fecha, LocalTime hora) {
+        this.pedido = pedido;
+        this.repartidor = repartidor;
+        this.fecha = fecha;
+        this.hora = hora;
+    }
+
+
+    public Entrega(int id, Pedido pedido, Repartidor repartidor, LocalDate fecha, LocalTime hora) {
+        this(pedido, repartidor, fecha, hora);
+        this.id = id;
+    }
+
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public Pedido getPedido() { return pedido; }
+    public void setPedido(Pedido pedido) { this.pedido = pedido; }
+
+    public Repartidor getRepartidor() { return repartidor; }
+    public void setRepartidor(Repartidor repartidor) { this.repartidor = repartidor; }
+
+    public LocalDate getFecha() { return fecha; }
+    public void setFecha(LocalDate fecha) { this.fecha = fecha; }
+
+    public LocalTime getHora() { return hora; }
+    public void setHora(LocalTime hora) { this.hora = hora; }
+
+    @Override
+    public String toString() {
+        return "Entrega #" + id + " [Pedido: " + pedido.getId() + ", Repartidor: " + repartidor.getNombre() +
+                ", Fecha: " + fecha + ", Hora: " + hora + "]";
+    }
+}
